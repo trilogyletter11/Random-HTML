@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life</title>
+
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 7%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: dodgerblue;
+      }
+
+      img {
+        border-radius: 10px;
+        box-shadow: 2px 3px 3px 2px rgba(7, 7, 7);
+      }
+
+      #btn_no {
+        margin-right: 90px;
+        padding: 10px;
+        background-color: dodgerblue;
+        border-radius: 7px;
+        color: white;
+        font-weight: bold;
+        border: solid 1px white;
+        cursor: pointer;
+      }
+
+      #btn_no:hover {
+        border: solid 1px rgb(47, 255, 64);
+      }
+
+      #btn_yes {
+        margin-left: -70px;
+        padding: 10px;
+        background-color: dodgerblue;
+        border-radius: 7px;
+        color: white;
+        font-weight: bold;
+        border: solid 1px white;
+        cursor: pointer;
+      }
+
+      #btn_yes:hover {
+        border: solid 1px rgb(47, 255, 64);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>DEAR LIFE</h1>
+      <img
+        src="https://cdn.dribbble.com/users/291221/screenshots/1497237/media/922951e3fd85621a48b7100b9938573c.gif"
+      />
+      <h2>Should i stop right now?</h2>
+      <button
+        id="btn_no"
+        onclick='document.write("<h1 style=\"color:dodgerblue; font-family:arial, helvetica, sans-serif; font-weight: bold; text-align: center; margin-top: 100px;\">(You are Great, " + "Keep Fighting till" + " The End!)<\/h1>");
+        document.write("<hr>");
+        document.write("<div style=\"text-align: center; margin-top: 50px; \"> <img src=\"like.png\"> <\/h1>");'
+      >
+        No, Don't
+      </button>
+      <button id="btn_yes" onclick="yes(this)" style="position: absolute">
+        Yes, Go Ahead
+      </button>
+    </div>
+  </body>
+  <script>
+    function yes(id) {
+      var no = document.getElementById("btn_no");
+      var i = Math.floor(Math.random() * 1000) + 1;
+      var j = Math.floor(Math.random() * 100) + 1;
+      id.style.left = i + "px";
+      id.style.top = j + "px";
+    }
+  </script>
+</html>
